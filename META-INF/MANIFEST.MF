@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: de.wit.eclipse.plugin.zoom;singleton:=true
+Bundle-Version: 1.0.0
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Export-Package: de.wit.eclipse.plugin.zoom.handler;uses:="org.eclipse.core.commands"
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %Bundle-Vendor

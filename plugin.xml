@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+    <extension point="org.eclipse.ui.commands">
+        <category id="de.wit.eclipse.plugin.zoom.command.category" name="%Bundle-Name"></category>
+
+        <command id="de.wit.eclipse.plugin.zoom.command.in"    name="%in"    categoryId="de.wit.eclipse.plugin.zoom.command.category"></command>
+        <command id="de.wit.eclipse.plugin.zoom.command.out"   name="%out"   categoryId="de.wit.eclipse.plugin.zoom.command.category"></command>
+        <command id="de.wit.eclipse.plugin.zoom.command.reset" name="%reset" categoryId="de.wit.eclipse.plugin.zoom.command.category"></command>
+    </extension>
+    <extension point="org.eclipse.ui.bindings">
+        <key sequence="M1++"               commandId="de.wit.eclipse.plugin.zoom.command.in"    schemeId="org.eclipse.ui.defaultAcceleratorConfiguration" contextId="org.eclipse.ui.textEditorScope"/>
+        <key sequence="M1+NUMPAD_ADD"      commandId="de.wit.eclipse.plugin.zoom.command.in"    schemeId="org.eclipse.ui.defaultAcceleratorConfiguration" contextId="org.eclipse.ui.textEditorScope"/>
+        <key sequence="M1+-"               commandId="de.wit.eclipse.plugin.zoom.command.out"   schemeId="org.eclipse.ui.defaultAcceleratorConfiguration" contextId="org.eclipse.ui.textEditorScope"/>
+        <key sequence="M1+NUMPAD_SUBTRACT" commandId="de.wit.eclipse.plugin.zoom.command.out"   schemeId="org.eclipse.ui.defaultAcceleratorConfiguration" contextId="org.eclipse.ui.textEditorScope"/>
+        <key sequence="M1+0"               commandId="de.wit.eclipse.plugin.zoom.command.reset" schemeId="org.eclipse.ui.defaultAcceleratorConfiguration" contextId="org.eclipse.ui.textEditorScope"/>
+        <key sequence="M1+NUMPAD_0"        commandId="de.wit.eclipse.plugin.zoom.command.reset" schemeId="org.eclipse.ui.defaultAcceleratorConfiguration" contextId="org.eclipse.ui.textEditorScope"/>
+    </extension>
+    <extension point="org.eclipse.ui.handlers">
+        <handler class="de.wit.eclipse.plugin.zoom.handler.InHandler"    commandId="de.wit.eclipse.plugin.zoom.command.in"></handler>
+        <handler class="de.wit.eclipse.plugin.zoom.handler.OutHandler"   commandId="de.wit.eclipse.plugin.zoom.command.out"></handler>
+        <handler class="de.wit.eclipse.plugin.zoom.handler.ResetHandler" commandId="de.wit.eclipse.plugin.zoom.command.reset"></handler>
+    </extension>
+</plugin>
